@@ -1,5 +1,6 @@
 import AddTask from './components/AddTask/AddTask'
 import Banner from './components/Banner/Banner'
+import Task from './components/Tasks/Task'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
        <Banner />
        <AddTask />
+       <Task tasks={[]} />
     </>
   )
 }

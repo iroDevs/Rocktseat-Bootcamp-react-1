@@ -8,13 +8,13 @@
 .field_search {
     display: flex;
     gap: 5px;
-    height: 5.27vh;
+    height: 5.35vh;
     width: 51.11%;
 
 }
 
 .field_search input {
-    width: 80%;
+    width: 90%;
     height: 100%;
     background-color: var(--gray-500);
     padding: 0px 20px;
@@ -30,7 +30,14 @@
     color: var(--gray-100);
     gap: 5px;
     padding: 0px 20px;
-    width: 20%;
+    width: 10%;
     height: 100%;
     background-color: var(--blue-dark);
+    transition: 0.2s ease-in-out;
+}
+
+
+.field_search button:hover {
+   background-color: var(--blue);
+   cursor: pointer;
 }
