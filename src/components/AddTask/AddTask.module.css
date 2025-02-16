@@ -1,0 +1,36 @@
+.box_input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.875rem
+}
+
+.field_search {
+    display: flex;
+    gap: 5px;
+    height: 5.27vh;
+    width: 51.11%;
+
+}
+
+.field_search input {
+    width: 80%;
+    height: 100%;
+    background-color: var(--gray-500);
+    padding: 0px 20px;
+    color: var(--gray-100);
+    border-radius: 8px;
+}
+
+.field_search button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px 8px 8px 8px;
+    color: var(--gray-100);
+    gap: 5px;
+    padding: 0px 20px;
+    width: 20%;
+    height: 100%;
+    background-color: var(--blue-dark);
+}

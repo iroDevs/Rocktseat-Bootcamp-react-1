@@ -1,8 +1,12 @@
+import AddTask from './components/AddTask/AddTask'
+import Banner from './components/Banner/Banner'
+
 function App() {
 
   return (
     <>
-  <h1>Ola mundo</h1>
+       <Banner />
+       <AddTask />
     </>
   )
 }
