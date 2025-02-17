@@ -1,15 +1,15 @@
-import React from 'react';
+import React, { ImgHTMLAttributes } from 'react';
 import TrashSvg from '../../assets/trash.svg'; // Ajuste o caminho conforme necessário
 
-interface TrashIconProps {
+interface TrashIconProps extends ImgHTMLAttributes<HTMLImageElement> {
     className: string;
 }
 
-const TrashIcon = ({ className }: TrashIconProps) => (
+const TrashIcon = ({ className, ...props }: TrashIconProps) => (
     <img
         src={TrashSvg}
-        alt="Remover tarefa"
         className={className}
+        {...props}
     />
 );
 

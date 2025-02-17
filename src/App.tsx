@@ -30,11 +30,16 @@ function App() {
     setTasks(newTasks)
   }
 
+  function handleDeleteTask(id: number) {
+    const newTasks = tasks.filter(task => task.id !== id)
+    setTasks(newTasks)
+  }
+
   return (
     <>
        <Banner />
        <AddTask addTask={handleAddTask} />
-       <Task clickTask={clickCheckTask} tasks={tasks} />
+       <Task clickTask={clickCheckTask} deleteTask={handleDeleteTask} tasks={tasks} />
     </>
   )
 }

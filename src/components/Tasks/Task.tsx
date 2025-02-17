@@ -11,10 +11,11 @@ export interface task {
 export interface TaskProps {
     tasks: task[];
     clickTask: (id: number) => void;
+    deleteTask: (id: number) => void;
 }
 
 
-export default function Task({ tasks, clickTask }: TaskProps) {
+export default function Task({ tasks, clickTask, deleteTask }: TaskProps) {
     const isEmpty = tasks.length === 0;
     const qtn_tasksCompleted = tasks.filter(task => task.checked).length === 0 ? 0 : `${tasks.filter(task => task.checked).length} de ${tasks.length}`;
 
@@ -38,6 +39,7 @@ export default function Task({ tasks, clickTask }: TaskProps) {
                                         <span className={style.text_task}>{task.texto}</span>
                                         <TrashIcon
                                             className={style.icon_trash}
+                                            onClick={() => deleteTask(task.id)}
                                         />
                                     </li>
                                   ))
