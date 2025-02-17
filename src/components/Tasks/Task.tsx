@@ -1,6 +1,7 @@
 import Empty from './Empty'
 import style from './Task.module.css'
 
+import TrashIcon from './TrashIcon';
 export interface task {
     id: number;
     texto: string;
@@ -25,7 +26,19 @@ export default function Task({ tasks }: TaskProps) {
                         isEmpty ?
                             <Empty />
                             :
-                            <h1>Lista</h1>
+                            <ul className={style.list_task}>
+                                {
+                                  tasks.map(task => (
+                                    <li key={task.id} >
+                                        <input type="checkbox" />
+                                        <span className={style.text_task}>{task.texto}</span>
+                                        <TrashIcon
+                                            className={style.icon_trash}
+                                        />
+                                    </li>
+                                  ))
+                                }
+                            </ul>
                     }
 
                 </div>
