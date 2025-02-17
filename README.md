@@ -1,50 +1,47 @@
-# React + TypeScript + Vite
+# 📋 To-Do App com TypeScript e React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Sobre o Projeto
+Este é um aplicativo de tarefas (To-Do) desenvolvido com **TypeScript** e **React**, utilizando o **Vite** para configuração do ambiente de desenvolvimento. O objetivo deste projeto é ajudar os usuários a organizarem suas atividades diárias, permitindo criar e excluir tarefas de forma prática e intuitiva.
 
-Currently, two official plugins are available:
+![Screenshot_30](https://github.com/user-attachments/assets/2ad7d482-4aa7-4e87-9237-a7c2f5a89109)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades
+- ✅ **Criar Tarefas**: Adicione novas tarefas à sua lista.
+- ❌ **Excluir Tarefas**: Remova tarefas concluídas ou desnecessárias.
+- 📋 **Listar Tarefas**: Veja todas as suas tarefas em um só lugar.
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
+- **TypeScript**: Para tipagem estática e segurança no desenvolvimento.
+- **React**: Biblioteca para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida e moderna para desenvolvimento com React.
+- **CSS**: Para estilização da interface.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## ⚙️ Pré-requisitos
+Antes de começar, você precisará ter as seguintes ferramentas instaladas em sua máquina:
+- [Node.js](https://nodejs.org) (versão 14 ou superior)
+- [npm](https://www.npmjs.com) (versão 6 ou superior)
 
-- Configure the top-level `parserOptions` property like this:
+## 📦 Instalação
+1. **Clone o repositório:**
+2. Instale as dependencias
+3. Rode o projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Comandos da instalação ⚙️ [comands]
+Passo 1:
+   ```bash
+   git clone https://github.com/iroDevs/Rocktseat-Bootcamp-react-1.git
+  ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Passo 2:
+   ```bash
+   npm install
+  ```
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Passo 3:
+   ```bash
+   npm run dev
+  ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+
+
+
