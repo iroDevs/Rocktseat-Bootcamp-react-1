@@ -5,21 +5,25 @@ import TrashIcon from './TrashIcon';
 export interface task {
     id: number;
     texto: string;
+    checked: boolean;
 }
 
 export interface TaskProps {
     tasks: task[];
+    clickTask: (id: number) => void;
 }
 
 
-export default function Task({ tasks }: TaskProps) {
+export default function Task({ tasks, clickTask }: TaskProps) {
     const isEmpty = tasks.length === 0;
+    const qtn_tasksCompleted = tasks.filter(task => task.checked).length === 0 ? 0 : `${tasks.filter(task => task.checked).length} de ${tasks.length}`;
+
     return (
         <div className={style.container_task}>
             <div className={style.box_task}>
                 <div className={style.header}>
-                    <span className={style.create_task_label}>Tarefas criadas <span className={style.count_form}> 0 </span></span>
-                    <span className={style.complete_task_label}>Concluídas <span className={style.count_form}>0</span></span>
+                    <span className={style.create_task_label}>Tarefas criadas <span className={style.count_form}> {tasks.length} </span></span>
+                    <span className={style.complete_task_label}>Concluídas <span className={style.count_form}>{qtn_tasksCompleted}</span></span>
                 </div>
                 <div>
                     {
@@ -30,7 +34,7 @@ export default function Task({ tasks }: TaskProps) {
                                 {
                                   tasks.map(task => (
                                     <li key={task.id} >
-                                        <input type="checkbox" />
+                                        <input onChange={() => clickTask(task.id)} type="checkbox" />
                                         <span className={style.text_task}>{task.texto}</span>
                                         <TrashIcon
                                             className={style.icon_trash}
